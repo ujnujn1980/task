@@ -1,0 +1,21 @@
+<%= form_for @tasklist do |f| %>
+
+  <div id='form'>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+  </p>
+
+  <%= f.submit %>
+  </div>
+
+  <div id='footer'>
+  <%= link_to 'Back',  tasklists_path %>
+  </div>
+
+<% end %>

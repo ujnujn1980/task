@@ -1,0 +1,14 @@
+<h2>index</h2>
+
+<% @tasklist.each do |tasklist| %>
+
+<%= tasklist.id %>
+<%= tasklist.title %>
+<%= tasklist.text %> 
+<%= link_to 'Edit', edit_tasklist_path(tasklist) %>
+<%= link_to 'Delete', tasklist_path(tasklist), method: :delete, data:{confirm: 'ok?'} %>
+<br>
+
+<% end %>
+
+<%= link_to 'New', new_tasklist_path %>
